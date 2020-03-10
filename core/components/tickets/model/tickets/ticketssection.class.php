@@ -637,6 +637,9 @@ class TicketsSection extends modResource
             $owners = $c->stmt->fetchAll(PDO::FETCH_COLUMN);
         }
 
+        if (empty($owners))
+            return;
+
         $authors = $this->xpdo->getIterator('TicketAuthor', array('id:IN' => $owners));
         /** @var TicketAuthor $author */
         foreach ($authors as $author) {

@@ -1,5 +1,9 @@
 Changelog for Tickets.
 
+1.13.1 pl
+==========
+- fix log error
+
 1.13.0 pl
 ==========
 - add integration with FormIt validator for TicketForm and comments
