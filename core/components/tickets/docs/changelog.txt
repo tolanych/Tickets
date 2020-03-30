@@ -3,6 +3,7 @@ Changelog for Tickets.
 1.13.1 pl
 ==========
 - fix log error
+- fix comments count in Tickets grid
 
 1.13.0 pl
 ==========

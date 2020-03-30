@@ -49,7 +49,7 @@ Ext.extend(Tickets.grid.Section, MODx.grid.Grid, {
             'id', 'pagetitle', 'published', 'deleted',
             'publishedon', 'createdon',
             'createdby', 'author', 'section_id', 'section',
-            'preview_url', 'comments', 'actions'
+            'preview_url', 'comments_count', 'actions'
         ];
     },
 
@@ -90,7 +90,7 @@ Ext.extend(Tickets.grid.Section, MODx.grid.Grid, {
             },
         }, {
             header: _('ticket_comments'),
-            dataIndex: 'comments',
+            dataIndex: 'comments_count',
             width: 50,
             sortable: true,
         }, {

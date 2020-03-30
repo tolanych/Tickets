@@ -21,7 +21,7 @@ class TicketGetListProcessor extends modObjectGetListProcessor
         $c->select(array(
             'username' => 'CreatedBy.username',
             'author' => 'UserProfile.fullname',
-            'comments' => 'Thread.comments',
+            'comments_count' => 'Thread.comments',
         ));
         $c->where(array(
             'class_key' => 'Ticket',
@@ -62,6 +62,9 @@ class TicketGetListProcessor extends modObjectGetListProcessor
 
         if (empty($array['author'])) {
             $array['author'] = $array['username'];
+        }
+        if (empty($array['comments_count'])) {
+            $array['comments_count'] = 0;
         }
         $this->modx->getContext($array['context_key']);
         $array['preview_url'] = $this->modx->makeUrl($array['id'], $array['context_key']);
